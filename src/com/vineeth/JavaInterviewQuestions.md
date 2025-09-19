@@ -1,4 +1,4 @@
-###########################################################################################
+#########################################################################################
 Java Theoretical question:
 
 1. What is a java
@@ -71,7 +71,7 @@ Java Theoretical question:
 68. Jdbc connection interface
 69. Connection pooling mean
 70. Jdbc driver manager class
-####################################################################################################
+#########################################################################################
 Java Data Structures and Algorithms:
 Stack, queue, linked list, binary tree, binary search tree, sorting, graph
 
@@ -97,7 +97,7 @@ Graph:
 
 
 
-#####################################################################################################
+#########################################################################################
 Java Design Patterns:
 
 Creational Design Pattern:
@@ -116,11 +116,11 @@ Abstract Factory design pattern:
 
 
 
-######################################################################################################
+#########################################################################################
 SOLID PRINCIPLEs
 
 
-######################################################################################################
+#########################################################################################
 System design 
 
 
@@ -128,7 +128,7 @@ System design
 
 
 
-#####################################################################################################
+#########################################################################################
 Java hands-on questions:
 
 1. Even or Odd number
@@ -178,7 +178,7 @@ Java hands-on questions:
 45. How to reverse a linked list in pairs
 46. Implement doubly linked list
 47. How can you traverse binary tree
-#############################################################################################
+#########################################################################################
 Java Streams:
 
 Intermediate methods:
@@ -261,6 +261,6 @@ Java Streams API coding Questions:
 57. Given a list of strings print only the string elements excluding the digits using streams
 58. Given a list of strings find the first element having the length as 10 if not handle exceptions
 59. Reverse the list of strings using streams api
-##################################################################################################################
+#########################################################################################
 Spring Boot Interview:
 
