@@ -58,9 +58,10 @@ public class JavaStream {
 		l1.add(8);
 		l1.add(9);
 		l1.add(10);
-		l1.stream().filter(i->i%2==0).forEach(System.out::print);
-		System.out.println("\n");
-		l1.stream().filter(i->i%2!=0).forEach(System.out::print);
+		List<Integer> lst1 = l1.stream().filter(i->i%2==0).collect(Collectors.toList());
+		System.out.println("Even numbers: "+lst1);
+		List<Integer> lst2 = l1.stream().filter(i->i%2!=0).collect(Collectors.toList());
+		System.out.println("Odd numbers: "+lst2);
 		Map<Boolean, List<Integer>> m1 = l1.stream().collect(Collectors.partitioningBy(i->i%2==0));
 		System.out.println("Even numbers: "+m1.get(true));
 		System.out.println("Odd numbers: "+m1.get(false));
@@ -168,22 +169,145 @@ public class JavaStream {
 		System.out.println(l10.stream().collect(Collectors.summarizingInt(Integer::intValue)).getSum());
 		System.out.println(l10.stream().collect(Collectors.summarizingInt(Integer::intValue)).getAverage());
 		
-		System.out.println("<------------------------------Q17------------------------------>");
+		System.out.println("<-----------------------------Q17------------------------------>");
 		//17. How do you find common elements between two arrays
+		Integer[] arr6 = new Integer[]{2,4,3,6,7};
+		Integer[] arr7 = new Integer[]{3,5,6,9,1,8,0,2};
+		List<Integer> lst = new ArrayList();
+		for(int i=0;i<arr6.length;i++){
+			for(int j=0;j<arr7.length;j++){
+				if(arr6[i]==arr7[j]){
+					lst.add(arr6[i]);
+				}
+			}
+		}
+		System.out.println(lst);
+		Set<Integer> st = new HashSet(Arrays.asList(arr6));
+		List<Integer> l11 = Arrays.stream(arr7).filter(st::contains).collect(Collectors.toList());
+		System.out.println(l11);
 		
+		System.out.println("<-----------------------------Q18------------------------------>");
+		//18. Reverse each word of a string
+		String s5 = "Hello bujji, where are you";
+		String s6 = Arrays.stream(s5.split(" ")).map(i-> new 
+		StringBuilder(i).reverse().toString()).collect(Collectors.joining(" "));
+		System.out.println(s6);
 		
+		System.out.println("<-----------------------------Q19------------------------------>");
+		//19. How do you find sum of first 10 natural numbers
+		int x3 = 10;
+		System.out.println(IntStream.range(0,x3).sum());
 		
-		System.out.println("<------------------------------Q1------------------------------>");
-		// Find pairs in the array whose sum should be match with given target
+		System.out.println("<-----------------------------Q20------------------------------>");
+		//20. Reverse an integer array
+		int[] arr8 = new int[]{1,2,3,4,5};
+		int[] arr9 = IntStream.rangeClosed(1, arr8.length).map(i->arr8[arr8.length-i]).toArray();
+		System.out.println(Arrays.toString(arr9));
+		
+		System.out.println("<-----------------------------Q21------------------------------>");
+		//21. Print first 10 even numbers
+		int x4 = 10;
+		int[] arr10 = IntStream.range(1, x4).filter(i->i%2==0).toArray();
+		System.out.println(Arrays.toString(arr10));
+				
+		System.out.println("<-----------------------------Q22------------------------------>");
+		//22. How do you find the most repeated element in an array
+		int[] arr11 = {1, 2, 3, 1, 5, 7, 5, 5, 9, 3, 1, 3, 3, 7,6};
+		int x5 = Arrays.stream(arr11).boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+				 .entrySet().stream()
+				 .max(Map.Entry.comparingByValue())
+				 .map(Map.Entry::getKey).get();
+		System.out.println(x5);
+		
+		System.out.println("<-----------------------------Q23------------------------------>");
+		//23. Palindrome program
+		String s7 = "Madam".toLowerCase();
+		boolean flag = IntStream.range(0, s7.length()/2).allMatch(i->s7.charAt(i)==s7.charAt(s7.length()-i-1));
+		if(!flag) {
+			System.out.println("It is not a palindrome");
+		}else{
+			System.out.println("It is a palindrome");
+		}
+		
+		System.out.println("<-----------------------------Q24------------------------------>");
+		//24. Given a list of strings, find out those strings which start with a number
+		String s8 = "v";
+		List<String> l12 = Arrays.asList("vineeth","bujji","vasu");
+		List<String> l13 = l12.stream().filter(i->i.startsWith(s8)).collect(Collectors.toList());
+		System.out.println(l13);
+				 
+		System.out.println("<-----------------------------Q25------------------------------>");
+		//25. How do you extract duplicate elements from an array
+		int[] array = {10, 12, 33, 30, 40, 40,52, 34, 40, 12, 78, 83, 78, 61, 61};
+		Set<Integer> set1 = new HashSet();
+		Set<Integer> set2 = Arrays.stream(array).filter(i->!set1.add(i)).boxed().collect(Collectors.toSet());
+		System.out.println(set2);
+				 
+		System.out.println("<-----------------------------Q26------------------------------>");
+		//26. Print duplte characters in a string
+		String s9="vinubujji";
+		Set<Character> set3 = new HashSet();
+		Set<Character> set4 = s9.chars().mapToObj(c->(char) c).filter(i->!set3.add(i)).collect(Collectors.toSet());
+		System.out.println(set4);
+				 
+		System.out.println("<-----------------------------Q27------------------------------>");
+	    //27. Find first repeated character in a string
+		String s10="vinubujji";
+		Set<Character> seen = new HashSet<>();
+		char c = s10.chars().mapToObj(i -> (char) i).filter(i -> !seen.add(i)).findFirst().get();
+		System.out.println(c);
+		
+		System.out.println("<-----------------------------Q28------------------------------>");
+		//28. Find first repeated character in a string
+		String s11="vinubujji";
+		Set<Character> set5 = new HashSet<>();
+		char c2 = s10.chars().mapToObj(i -> (char) i).filter(i -> set5.add(i)).findFirst().get();
+		System.out.println(c2);
+				 
+		System.out.println("<-----------------------------Q29------------------------------>");
+		//29. Find the longest string in a list of strings using java streams
+		List<String> l14 = Arrays.asList("vineeth", "bujji", "vasu", "sekhar");
+		String s12 = l14.stream().max(Comparator.comparingInt(String::length)).get().toString();
+		System.out.println(s12);
+				
+		System.out.println("<-----------------------------Q30------------------------------>");
+		//30. Calculate the average age of a list of person objects
+		List<Person> l15 = Arrays.asList(
+				new Person("Alice", 30),
+				new Person("Bob", 25),
+				new Person("Charlie", 35),
+				new Person("David", 40)
+		);
+		double averageAge = l15.stream().mapToInt(Person::getAge).average().orElse(0.0);
+		System.out.println("Average age: "+ averageAge);
+		
+		System.out.println("<-----------------------------Q31------------------------------>");
+		//31. Check if a list of integers contains a prime number
+		List<Integer> l16 = Arrays.asList(1, 2, 3, 4, 5);
+		List<Integer> l17 = Arrays.asList(3, 4, 5, 6, 7);
+		List<Integer> l18 = l16.stream().filter(l17::contains).collect(Collectors.toList());
+		System.out.println("Intersection: " + l18);
+				        
+		System.out.println("<-----------------------------Q32------------------------------>");
+		//32. Find the 4th smallest element in a an array
+		int[] arr = {7, 10, 4, 3, 20, 15};
+		int fourthSmallest = Arrays.stream(arr).boxed().sorted().skip(3).findFirst().get();
+		System.out.println("4th smallest element is: " + fourthSmallest);
+				        
+		System.out.println("<-----------------------------Q33------------------------------>");
+		//33. Given a list of strings, find the frequency of each word using java
+		List<String> words = Arrays.asList("apple", "banana", "apple", "orange", "banana", "apple");
+		Map<String, Long> frequency = words.stream().collect(Collectors.groupingBy(word -> word, Collectors.counting()));
+		frequency.forEach((word, count) -> System.out.println(word + ": " + count));
+				 
+		System.out.println("<-----------------------------Q34------------------------------>");
+		//34. Find pairs in the array whose sum should be match with given target
 		int[] ar = new int[]{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
 		int target = 21;
 		findPair(ar,target);
 		findPairs(ar,target);
 		
 	}
-	
-	
-	
 	
 	
 	
@@ -200,6 +324,7 @@ public class JavaStream {
 		}
 	}
 
+	
 	public static void findPair(int[] arr, int target){
 		int sum=0;
 		List<Integer> al = new ArrayList<>();
@@ -219,6 +344,7 @@ public class JavaStream {
 		System.out.println(m);
 	}
 	
+	
 	public static void findPairs(int[] arr, int target) {
         Set<Integer> seen = new HashSet<>();
         List<List<Integer>> result = new ArrayList<>();
@@ -233,4 +359,5 @@ public class JavaStream {
         System.out.println(result);
     }
 
+	
 }
