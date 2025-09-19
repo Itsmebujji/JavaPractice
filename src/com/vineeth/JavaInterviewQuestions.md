@@ -1,4 +1,5 @@
 #########################################################################################
+
 Java Theoretical question:
 
 1. What is a java
@@ -71,7 +72,9 @@ Java Theoretical question:
 68. Jdbc connection interface
 69. Connection pooling mean
 70. Jdbc driver manager class
+
 #########################################################################################
+
 Java Data Structures and Algorithms:
 Stack, queue, linked list, binary tree, binary search tree, sorting, graph
 
@@ -91,13 +94,14 @@ Graph:
 2. Write algorithm to do breadth first search in a graph
 3. Dijkstra algorithm from source to all other vertices
 4. Bellman Ford algorithm to find shortest distance
-5. Kruskal’s algorithm for finding minimum spanning tree
+5. Kruskalâ€™s algorithm for finding minimum spanning tree
 
 
 
 
 
 #########################################################################################
+
 Java Design Patterns:
 
 Creational Design Pattern:
@@ -105,8 +109,8 @@ Provide solution to instantiate an object
 
 Singleton Pattern:
 Instance or object will be created by only once. Single object for class for lifetime of application. 
-Object will create once, another can’t create, instead need to set the object values.
-Unit testing -> will be difficult (we can’t mock)
+Object will create once, another canâ€™t create, instead need to set the object values.
+Unit testing -> will be difficult (we canâ€™t mock)
 
 Factory Pattern: 
 This pattern used to create objects without exposing the instantiation logic to the client. Instead, the client interacts with a common interface, and factory class decides which subclass object to instantiate and return based on the input or configuration.
@@ -117,11 +121,13 @@ Abstract Factory design pattern:
 
 
 #########################################################################################
-SOLID PRINCIPLEs
+
+SOLID Principle:
 
 
 #########################################################################################
-System design 
+
+System Design:
 
 
 
@@ -129,6 +135,7 @@ System design
 
 
 #########################################################################################
+
 Java hands-on questions:
 
 1. Even or Odd number
@@ -178,7 +185,9 @@ Java hands-on questions:
 45. How to reverse a linked list in pairs
 46. Implement doubly linked list
 47. How can you traverse binary tree
+
 #########################################################################################
+
 Java Streams:
 
 Intermediate methods:
@@ -261,6 +270,8 @@ Java Streams API coding Questions:
 57. Given a list of strings print only the string elements excluding the digits using streams
 58. Given a list of strings find the first element having the length as 10 if not handle exceptions
 59. Reverse the list of strings using streams api
+
 #########################################################################################
+
 Spring Boot Interview:
 
