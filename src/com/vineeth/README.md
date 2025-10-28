@@ -1,7 +1,6 @@
-#########################################################################################
-
+-------------------------------------------------------------------------------------------
 Java Theoretical question:
-
+-------------------------------------------------------------------------------------------
 1. What is a java
 2. What are the concepts of oops
 3. Mention some features of oops
@@ -73,71 +72,9 @@ Java Theoretical question:
 69. Connection pooling mean
 70. Jdbc driver manager class
 
-#########################################################################################
-
-Java Data Structures and Algorithms:
-Stack, queue, linked list, binary tree, binary search tree, sorting, graph
-
-Sorting:
-1. Write an alogrithm to implement bubble sort
-2. Write an algorithm to implement insertion sort
-3. Write an algorithm to implement selection sort
-4. Can you write algorithm for merge sort
-5. Do you know how to implement heap sort
-6. Implement quick sort
-7. Implement shell sort
-8. Implement counting sort
-9. Binary search
-
-Graph:
-1. Write algorithm to do depth first search in a graph
-2. Write algorithm to do breadth first search in a graph
-3. Dijkstra algorithm from source to all other vertices
-4. Bellman Ford algorithm to find shortest distance
-5. Kruskalâ€™s algorithm for finding minimum spanning tree
-
-
-
-
-
-#########################################################################################
-
-Java Design Patterns:
-
-Creational Design Pattern:
-Provide solution to instantiate an object
-
-Singleton Pattern:
-Instance or object will be created by only once. Single object for class for lifetime of application. 
-Object will create once, another canâ€™t create, instead need to set the object values.
-Unit testing -> will be difficult (we canâ€™t mock)
-
-Factory Pattern: 
-This pattern used to create objects without exposing the instantiation logic to the client. Instead, the client interacts with a common interface, and factory class decides which subclass object to instantiate and return based on the input or configuration.
-
-Abstract Factory design pattern: 
-
-
-
-
-#########################################################################################
-
-SOLID Principle:
-
-
-#########################################################################################
-
-System Design:
-
-
-
-
-
-
-#########################################################################################
-
+-------------------------------------------------------------------------------------------
 Java hands-on questions:
-
+-------------------------------------------------------------------------------------------
 1. Even or Odd number
 2. Is prime or prime numbers
 3. Sum of number in the array
@@ -186,10 +123,9 @@ Java hands-on questions:
 46. Implement doubly linked list
 47. How can you traverse binary tree
 
-#########################################################################################
-
+-------------------------------------------------------------------------------------------
 Java Streams:
-
+-------------------------------------------------------------------------------------------
 Intermediate methods:
 1. Map
 2. Filter
@@ -198,6 +134,7 @@ Intermediate methods:
 5. Map and flatMap in java streams
 6. Distinct
 7. Peek
+
 Terminal method:
 1. Collect
 2. forEach
@@ -207,8 +144,9 @@ Terminal method:
 6. allMatch
 7. anyMatch
 
+-------------------------------------------------------------------------------------------
 Java Streams API coding Questions:
-
+-------------------------------------------------------------------------------------------
 1. Given a list of integers, separate odd and even numbers
 2. How do you remove duplicate elements from a list
 3. Find frequency of each character in a string
@@ -264,14 +202,124 @@ Java Streams API coding Questions:
 52. Write a java program to remove all strings from the list that are empty or null using streams
 53. Given a list of strings, group a list of strings by the first letter of each string using streams
 54. Given a list of strings, group a list of strings by the length of the string
-55. Given a list of strings, create a map where the key is the first letter of the string, and the value is a list of
-	strings that start with that letter using streams
+55. Given a list of strings, create a map where the key is the first letter of the string, and the value is a
+    list of strings that start with that letter using streams
 56. Given a list of strings, group the list of string with vowels and no vowels into two lists
 57. Given a list of strings print only the string elements excluding the digits using streams
 58. Given a list of strings find the first element having the length as 10 if not handle exceptions
 59. Reverse the list of strings using streams api
 
-#########################################################################################
+-------------------------------------------------------------------------------------------
+Multi-threading Interview Questions:
+-------------------------------------------------------------------------------------------
+1. What is a thread?
+2. What is the difference between a process and a thread?
+3. What are the benefits of multi-threading?
+4. What are the different states of a thread?
+5. What is the difference between start() and run() method in a thread?
+6. What is the difference between user threads and daemon threads?
+7. What is context switching?
+8. How can you create a thread in Java (or your language)?
+9. What happens when you call sleep() or wait() on a thread?
+10. What is the difference between wait() and sleep()?
+11. How do you ensure thread safety in your code?
+12. What are race conditions? How do you avoid them?
+13. What is a deadlock? How can you prevent it?
+14. Explain the concept of a livelock and how it differs from a deadlock.
+15. What is a thread-safe collection? Can you name a few examples?
+16. Explain synchronized keyword. What are its limitations?
+17. What are volatile variables and when would you use them?
+18. What is the difference between synchronized and ReentrantLock in Java?
+19. What are atomic operations?
+20. How does the thread scheduler decide which thread to run?
+21. How do you detect and resolve deadlocks in a multithreaded environment?
+22. What is false sharing in multithreading?
+23. What are thread pools? Why are they used?
+24. Explain the difference between concurrency and parallelism.
+25. What are some common pitfalls of multithreaded programming?
+26. Explain how ConcurrentHashMap works internally.
+27. What is the difference between CountDownLatch, CyclicBarrier, and Semaphore?
+28. How do modern CPUs and caches impact multithreading?
+29. What is a memory consistency error?
+30. Explain the Java Memory Model (JMM). How does it affect multi-threading?
 
-Spring Boot Interview:
+-------------------------------------------------------------------------------------------
+Language-Specific Topics:
+-------------------------------------------------------------------------------------------
+1. Executors framework
+2. Fork/Join framework
+3. ThreadLocal
+4. CompletableFuture vs Future
+
+-------------------------------------------------------------------------------------------
+Coding/Practical Questions:
+-------------------------------------------------------------------------------------------
+1. Write a program to print even and odd numbers using two threads.
+2. Implement a thread-safe singleton class.
+3. Producer-consumer problem using wait/notify.
+4. Dining philosophers problem.
+5. Create a thread pool executor from scratch.
+6. Implement a rate limiter using multithreading.
+7. Implement a bounded blocking queue.
+8. Reader-writer problem.
+9. Alternately print “foo” and “bar” using two threads.
+10. Implement a countdown latch using low-level primitives.
+
+-------------------------------------------------------------------------------------------
+Java Data Structures and Algorithms:
+-------------------------------------------------------------------------------------------
+Stack, queue, linked list, binary tree, binary search tree, sorting, graph
+
+Sorting:
+1. Write an alogrithm to implement bubble sort
+2. Write an algorithm to implement insertion sort
+3. Write an algorithm to implement selection sort
+4. Can you write algorithm for merge sort
+5. Do you know how to implement heap sort
+6. Implement quick sort
+7. Implement shell sort
+8. Implement counting sort
+9. Binary search
+
+Graph:
+1. Write algorithm to do depth first search in a graph
+2. Write algorithm to do breadth first search in a graph
+3. Dijkstra algorithm from source to all other vertices
+4. Bellman Ford algorithm to find shortest distance
+5. Kruskalâ€™s algorithm for finding minimum spanning tree
+
+-------------------------------------------------------------------------------------------
+Java Design Patterns:
+-------------------------------------------------------------------------------------------
+Creational Design Pattern:
+Provide solution to instantiate an object
+
+Singleton Pattern:
+Instance or object will be created by only once. Single object for class for lifetime of application. 
+Object will create once, another canâ€™t create, instead need to set the object values.
+Unit testing -> will be difficult (we can not mock)
+
+Factory Pattern: 
+This pattern used to create objects without exposing the instantiation logic to the client. Instead, the client interacts with a common interface, and factory class decides which subclass object to instantiate and return based on the input or configuration.
+
+Abstract Factory design pattern: 
+
+
+
+
+-------------------------------------------------------------------------------------------
+SOLID Principle:
+-------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------
+System Design:
+-------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------
+Spring boot Interview Questions:
+-------------------------------------------------------------------------------------------
+
+
+
 

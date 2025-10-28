@@ -100,14 +100,6 @@ public class JavaMain {
 		MergeSort ms = new MergeSort();
 		ms.mergeSort(sortarr);
 		
-		
-		System.out.println("\n----------------------Multi-threading--------------------------");
-		
-//		Deadlock1 d1 = new Deadlock1(obj1,obj2);
-//		Deadlock2 d2 = new Deadlock2(obj1,obj2);
-//		d1.start();
-//		d2.start();
-		
 		System.out.println("\n----------------------File Handling--------------------------");
 		
 		FileHandling fh = new FileHandling();
@@ -120,6 +112,24 @@ public class JavaMain {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(s1);
         String formattedDate = now.format(formatter);
         System.out.println("Formatted Date: " + formattedDate);
+        
+        
+		System.out.println("\n----------------------Multi-threading--------------------------");
+		
+//		Deadlock1 d1 = new Deadlock1(obj1,obj2);
+//		Deadlock2 d2 = new Deadlock2(obj1,obj2);
+//		d1.start();
+//		d2.start();
+		Multithreading1 mt1 = new Multithreading1();
+		Thread mt2 = new Thread(new Multithreading2());
+		mt1.start();
+		mt2.start();
+		try {
+			mt2.join();
+		} catch (InterruptedException e) {
+			System.out.println(e.toString());
+		}
+		
 	}
 	
 }
