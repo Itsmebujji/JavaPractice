@@ -1,14 +1,16 @@
 package com.java.multithread;
 
-public class MultiThread2 implements Runnable {
+public class RunnableThread implements Runnable {
+	
 
 	@Override
 	public void run() {
 		System.out.println(Thread.currentThread().getName()+" is running");
 		try {
 			Thread.sleep(1000);
-		}catch(InterruptedException ex) {
-			System.out.println(ex.toString());
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		System.out.println(Thread.currentThread().getName()+" is executed successfully");
 	}

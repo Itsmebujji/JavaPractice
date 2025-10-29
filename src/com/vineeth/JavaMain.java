@@ -1,28 +1,19 @@
 package com.vineeth;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.text.SimpleDateFormat;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Comparator;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+
 
 
 public class JavaMain {
 	
 	public static void main(String[] args) {
-		Object obj1 = new Object();
-		Object obj2 = new Object();
 		
 		System.out.println("----------------------Numbers--------------------------");
 		
@@ -112,23 +103,6 @@ public class JavaMain {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(s1);
         String formattedDate = now.format(formatter);
         System.out.println("Formatted Date: " + formattedDate);
-        
-        
-		System.out.println("\n----------------------Multi-threading--------------------------");
-		
-//		Deadlock1 d1 = new Deadlock1(obj1,obj2);
-//		Deadlock2 d2 = new Deadlock2(obj1,obj2);
-//		d1.start();
-//		d2.start();
-		Multithreading1 mt1 = new Multithreading1();
-		Thread mt2 = new Thread(new Multithreading2());
-		mt1.start();
-		mt2.start();
-		try {
-			mt2.join();
-		} catch (InterruptedException e) {
-			System.out.println(e.toString());
-		}
 		
 	}
 	
