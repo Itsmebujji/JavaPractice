@@ -397,17 +397,6 @@ public class JavaFeatures {
 //            }
 //        } // executor auto-closes and waits
         
-        
-        
-//        	Here are 3-4 top options you could pick, one for each domain (Tableau + Informatica):
-//
-//        	“Tableau Server 2019.1 Administration” (Udemy) – for Tableau Server admin.
-//
-//        	“Tableau Server / Site Administration” official Tableau training – for deeper official/admin path.
-//
-//        	“Informatica PowerCenter Administration” (Udemy) – for Informatica admin basics & advanced.
-//
-//        	“Informatica Platform Administration Fundamentals” (Informatica University) – for enterprise/production scale admin tasks.
         	
 	}
 
