@@ -1,4 +1,4 @@
-package com.java.java;
+package com.vineeth.java;
 
 import java.io.IOException;
 import java.net.URI;

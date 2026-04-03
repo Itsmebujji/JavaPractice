@@ -1,4 +1,4 @@
-package com.java.java;
+package com.vineeth.java;
 
 public class MergeSort {
 	public int[] mergeSortArr;

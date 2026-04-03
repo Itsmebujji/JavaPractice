@@ -1,4 +1,4 @@
-package com.java.java;
+package com.vineeth.java;
 
 import java.util.Arrays;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.java.java;
+package com.vineeth.java;
 
 public class BinarySearch {
 	public int[] arr;

@@ -1,7 +1,8 @@
-package com.java.java;
+package com.vineeth.java;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -236,7 +237,7 @@ public class StreamAPI {
 		l44.stream().filter(i->seen1.add(i.toLowerCase())).forEach(i->System.out.print(i+" "));
 		System.out.println("");
 		
-		// Get distinct characters from a string
+		// Get distinct characters from a string [imp]
 		String s1 = "vineeth";
 		s1.chars().distinct().mapToObj(i->(char) i).forEach(i->System.out.print(i+" "));
 		System.out.println("");
@@ -251,11 +252,30 @@ public class StreamAPI {
 		l46.stream().distinct().filter(i->i%2==0).forEach(i->System.out.print(i+" "));
 		System.out.println("");
 		
-		// Get distinct objects based on a field
+		// Get distinct objects based on a field [imp]
 		List<Employee> l47 = Arrays.asList(new Employee(1, "vk", 200000.00), new Employee(2, "vasu",35000.00), new Employee(1, "sekhar", 50000.00));
 		Set<Integer> seen2 = new HashSet<>();
 		l47.stream().filter(i->seen2.add((int) i.getEmployeeId())).forEach(i->System.out.print(i+" "));
+		System.out.println("");
 		
-		// 
+		// Sorted()
+		
+		// Sort a list of integers in ascending order
+		List<Integer> l48 = Arrays.asList(15,23,54,34,23,76,56,65,87,45,34);
+		l48.stream().sorted().forEach(i->System.out.print(i+" "));
+		System.out.println("");
+		
+		// Sort a list of integers in descending order
+		List<Integer> l49 = Arrays.asList(15,23,54,34,23,76,56,65,87,45,34);
+		l49.stream().sorted(Comparator.reverseOrder()).forEach(i->System.out.print(i+" "));
+		System.out.println("");
+		
+		// Sort a list of strings alphabetically
+		List<String> l50 = Arrays.asList("Amma", "Nanna", "Bujji", "Annayya", "Thammu");
+		l50.stream().sorted().forEach(i->System.out.print(i+" "));
+		System.out.println("");
+		
+		//Sort strings in reverse alphabetical order
+		List<String> l51 = Arrays.asList("Amma", "Nanna", "Bujji", "Annayya", "Thammu");
 	}
 }
